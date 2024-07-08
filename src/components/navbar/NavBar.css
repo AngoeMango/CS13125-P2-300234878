@@ -17,8 +17,7 @@
     
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    color: #000;
-	background-color: yellow;
+    color: #000000;
     font-weight: 600;
     text-transform: uppercase;
 	text-decoration: none;
@@ -49,3 +48,38 @@
     height: auto;
 }
   
+.navbar-toggler {
+	border-color: rgba(0, 0, 0, 0.1);
+}
+  
+.navbar-toggler-icon {
+	color: #000;
+}
+
+.nav-item.dropdown .dropdown-menu {
+	display: none;
+  }
+  
+.nav-item.dropdown:hover .dropdown-menu {
+	display: block;
+	margin-top: 0; /* Adjust as needed */
+}
+
+.nav-item.dropdown .nav-link.dropdown-toggle::after {
+	display: none; /* Removes the default caret icon */
+}
+  
+.dropdown-menu {
+	color: #000000;
+	font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+
+	background-color: #f0f0f0;
+	margin-top: 0;
+	padding: 0;
+	border: none;
+}
+  
+.nav-item.dropdown {
+	position: relative;
+}

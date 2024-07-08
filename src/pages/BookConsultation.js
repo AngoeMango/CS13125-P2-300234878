@@ -1,9 +1,10 @@
 import React from 'react';
+import BookConsultationForm from '../components/form/BookConsultationForm';
 
 const BookConsultation = () => {
     return (
         <div className="container">
-            <p>This is the book a consultation page.</p>
+            <BookConsultationForm />
         </div>
     );
 };
