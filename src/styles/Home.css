@@ -11,7 +11,7 @@
     height: 100vh;
     overflow: hidden;
 }
-  
+
 .background-video {
     position: absolute;
     top: 0;
@@ -21,7 +21,7 @@
     object-fit: cover;
     z-index: -1;
 }
-  
+
 .overlay-text {
     position: absolute;
     top: 50%;
@@ -31,19 +31,41 @@
     text-align: center;
     z-index: 1;
 }
-  
+
 .overlay-text h1 {
     font-family: CostaNova;
     font-size: 15em;
     color: white;
-    
     margin: 0;
 }
-  
+
 .overlay-text p {
     font-family: 'Roboto', sans-serif;
-    font-weight: 600;
+    font-weight: 300;
     font-size: 2rem;
     text-transform: uppercase;
 }
-  
+
+.content-container {
+    padding: 40px 20px;
+    text-align: center;
+    color: black;
+}
+
+.content-container .img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.content-container .logo-image {
+    max-width: 200px;
+    height: auto;
+    margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+    .content-container .img-fluid {
+        height: 300px;
+        object-fit: cover;
+    }
+}

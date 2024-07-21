@@ -7,10 +7,6 @@ const BookConsultationForm = () => {
         lastName: '',
         email: '',
         phoneNumber: '',
-        selectDate: '',
-        selectTime: '',
-        meetingType: '',
-        meetingTopic: '',
         description: ''
     });
 
@@ -29,17 +25,13 @@ const BookConsultationForm = () => {
     if (isSubmitted) {
         return (
             <div className="container mt-5">
-                <h1 className="text-center">Consultation Booked!</h1>
-                <p className="text-center">Thank You For Choosing <span className="brand-name">Gracile Couture</span> For Your Next Project!</p>
+                <h1 className="text-center">Query Sent!</h1>
+                <p className="text-center">Here is a summary of your request. Our team is working very hard to get you back to you. <br /> Thank you for confiding in Gracile Couture!</p>
                 <div className="summary-box text-start">
                     <p><strong>FIRST NAME:</strong> <div className="form-data">{formData.firstName}</div></p>
                     <p><strong>LAST NAME:</strong> <div className="form-data">{formData.lastName}</div></p>
                     <p><strong>EMAIL:</strong> <div className="form-data">{formData.email}</div></p>
                     <p><strong>PHONE NUMBER:</strong> <div className="form-data">{formData.phoneNumber}</div></p>
-                    <p><strong>DATE:</strong> <div className="form-data">{new Date(formData.selectDate).toLocaleDateString()}</div></p>
-                    <p><strong>TIME:</strong> <div className="form-data">{formData.selectTime}</div></p>
-                    <p><strong>VIRTUAL OR IN-OFFICE:</strong> <div className="form-data">{formData.meetingType}</div></p>
-                    <p><strong>MEETING TOPIC:</strong> <div className="form-data">{formData.meetingTopic}</div></p>
                     <p><strong>REQUEST SUMMARY:</strong> <div className="form-data">{formData.description}</div></p>
                 </div>
             </div>
@@ -48,8 +40,8 @@ const BookConsultationForm = () => {
 
     return (
         <div className="container mt-5">
-            <h1 className="text-center">Book A Consultation</h1>
-            <p className="text-center">To Book An Appointment With One Of Our Designer Professionals, Fill Out The Form Below!</p>
+            <h1 className="text-center">Contact Us</h1>
+            <p className="text-center">Got something on your mind? Do you want to ask us a quick question on our services? Let us know below!</p>
             <form onSubmit={handleSubmit}>
                 <div className="row">
                     <div className="col-md-6 mb-3 input-container">
@@ -71,40 +63,8 @@ const BookConsultationForm = () => {
                         <input type="tel" className="form-control custom-input" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" value={formData.phoneNumber} onChange={handleChange} required />
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-md-6 mb-3 input-container">
-                        <label htmlFor="selectDate" className="text-start w-100 required">Select a Date</label>
-                        <input type="date" className="form-control custom-input" id="selectDate" name="selectDate" value={formData.selectDate} onChange={handleChange} required />
-                    </div>
-                    <div className="col-md-6 mb-3 input-container">
-                        <label htmlFor="selectTime" className="text-start w-100 required">Select a Time</label>
-                        <input type="time" className="form-control custom-input" id="selectTime" name="selectTime" value={formData.selectTime} onChange={handleChange} required />
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-md-6 mb-3 input-container">
-                        <label htmlFor="meetingType" className="text-start w-100 required">Virtual or In-Office Meeting</label>
-                        <select className="form-control custom-input" id="meetingType" name="meetingType" value={formData.meetingType} onChange={handleChange} required>
-                        <option value="">Select</option>
-                        <option value="virtual">Virtual</option>
-                        <option value="in-office">In-Office</option>
-                        </select>
-                    </div>
-                    <div className="col-md-6 mb-3 input-container">
-                        <label htmlFor="meetingTopic" className="text-start w-100 required">Meeting Topic</label>
-                        <select className="form-control custom-input" id="meetingTopic" name="meetingTopic" value={formData.meetingTopic} onChange={handleChange} required>
-                        <option value="">Select</option>
-                        <option value="Custom Garment Request">Custom Garment Request</option>
-                        <option value="Bridal/Wedding Couture">Bridal/Wedding Couture</option>
-                        <option value="Wardrobe Consultation">Wardrobe Consultation</option>
-                        <option value="Alterations and Repairs">Alterations and Repairs</option>
-                        <option value="Workshop Consultation">Workshop Consultation</option>
-                        <option value="Other">Other</option>
-                        </select>
-                    </div>
-                </div>
                 <div className="mb-3 input-container">
-                    <label htmlFor="description" className="text-start w-100 required">Please Describe the Request with Detail</label>
+                    <label htmlFor="description" className="text-start w-100 required">ENTER A MESSAGE</label>
                     <textarea className="form-control custom-input" id="description" name="description" rows="5" placeholder="Enter a message" value={formData.description} onChange={handleChange} required></textarea>
                 </div>
                 <div className="text-end">

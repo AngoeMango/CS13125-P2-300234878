@@ -62,11 +62,11 @@
   
 .nav-item.dropdown:hover .dropdown-menu {
 	display: block;
-	margin-top: 0; /* Adjust as needed */
+	margin-top: 0;
 }
 
 .nav-item.dropdown .nav-link.dropdown-toggle::after {
-	display: none; /* Removes the default caret icon */
+	display: none;
 }
   
 .dropdown-menu {
@@ -82,4 +82,16 @@
   
 .nav-item.dropdown {
 	position: relative;
+}
+
+.bookbutton {
+	color: white;
+	background-color: black;
+	border: black 1px;
+}
+
+.bookbutton:hover {
+	color: black;
+	background-color: white;
+	border: black 1px;
 }

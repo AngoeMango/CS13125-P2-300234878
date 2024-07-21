@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@font-face {
+    font-family: CostaNova;
+    src: url(../components/fonts/CostaNova.otf);
+}
+
+.services-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding-left: 15px; /* Adjust padding as needed */
+    padding-right: 15px; /* Adjust padding as needed */
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    font-weight: 300;
+}
+
+.subtitle {
+    color: black;
+    font-weight: 600;
+}
+
+.subtitle1 {
+    color: black;
+    font-weight: 800;
+}
+  
+.text-content {
+    padding: 50px 0 50px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.book-button {
+    padding: 25px 75px;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 3rem;
+    border: 0.1rem solid black;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+  
+.book-button:hover {
+    color: white;
+    background-color: black;
+    border-color: black;
+}
+
+.gallery-links {
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+}
+
+.gallery-links::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    transition: width 0.3s;
+}
+  
+.gallery-links:hover::after {
+    width: 10%;
+}
+
+.collections-gallery {
+    padding: 20px;
+}
+  
+.collection-section {
+    margin-bottom: 50px;
+}
+  
+.carousel .carousel-item img {
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+}
+
+  

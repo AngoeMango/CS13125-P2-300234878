@@ -13,8 +13,9 @@
 }
   
 .text-content {
-    padding: 50px 100px 50px;
+    padding: 50px 0 50px;
     color: black;
+    font-family: 'Roboto', sans-serif;
 }
   
 .video-container {

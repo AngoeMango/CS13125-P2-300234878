@@ -1,6 +1,6 @@
 // src/components/Fabrics.js
 import React, { useState } from 'react';
-import { Container, Row, Col, Form } from 'react-bootstrap';
+import { Container, Row, Col, Form, Dropdown, DropdownButton } from 'react-bootstrap';
 import FabricCard from '../../components/card/FabricCard';
 import '../../styles/Fabrics.css';
 import SamplePhoto from '../../media/SamplePhoto.png';
@@ -108,38 +108,23 @@ const Fabrics = () => {
 
             <Row className="mb-4">
                 <Col xs={12} md={6}>
-                <Form.Group>
-                    <Form.Label>Fiber Type</Form.Label>
-                    <Form.Check
-                    type="checkbox"
-                    id="natural-fibers"
-                    label="Natural Fibers"
-                    value="Natural"
-                    onChange={handleFiberFilterChange}
-                    />
-                    <Form.Check
-                    type="checkbox"
-                    id="synthetic-fibers"
-                    label="Synthetic Fibers"
-                    value="Synthetic"
-                    onChange={handleFiberFilterChange}
-                    />
-                </Form.Group>
+                    <DropdownButton className="custom-dropdown" id="dropdown-fiber-type" title="FIBRE TYPE">
+                        <Dropdown.Item as="button" onClick={() => handleFiberFilterChange({ target: { value: 'Natural', checked: !selectedFiberTypes.includes('Natural') } })}>
+                            <Form.Check type="checkbox" label="Natural Fibers" checked={selectedFiberTypes.includes('Natural')} />
+                        </Dropdown.Item>
+                        <Dropdown.Item as="button" onClick={() => handleFiberFilterChange({ target: { value: 'Synthetic', checked: !selectedFiberTypes.includes('Synthetic') } })}>
+                            <Form.Check type="checkbox" label="Synthetic Fibers" checked={selectedFiberTypes.includes('Synthetic')} />
+                        </Dropdown.Item>
+                    </DropdownButton>
                 </Col>
                 <Col xs={12} md={6}>
-                <Form.Group>
-                    <Form.Label>Colors</Form.Label>
-                    {uniqueColors.map((color, index) => (
-                    <Form.Check
-                        key={index}
-                        type="checkbox"
-                        id={`color-${color}`}
-                        label={color}
-                        value={color}
-                        onChange={handleColorFilterChange}
-                    />
-                    ))}
-                </Form.Group>
+                    <DropdownButton className="custom-dropdown" id="dropdown-colors" title="COLORS">
+                        {uniqueColors.map((color, index) => (
+                            <Dropdown.Item as="button" key={index} onClick={() => handleColorFilterChange({ target: { value: color, checked: !selectedColors.includes(color) } })}>
+                                <Form.Check type="checkbox" label={color} checked={selectedColors.includes(color)} />
+                            </Dropdown.Item>
+                        ))}
+                    </DropdownButton>
                 </Col>
             </Row>
 

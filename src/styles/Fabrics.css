@@ -26,4 +26,25 @@
 .subtitle {
     font-weight: 300;
 }
+
+.custom-dropdown .dropdown-toggle {
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+.custom-dropdown .dropdown-menu {
+    background-color: black;
+    color: white;
+}
+
+.custom-dropdown .dropdown-item {
+    color: white;
+}
+
+.custom-dropdown .dropdown-item:hover,
+.custom-dropdown .dropdown-item:focus {
+    background-color: #444; /* Darker shade for hover/active state */
+}
+
   

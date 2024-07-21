@@ -26,14 +26,11 @@ const NavBar = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link as={Link} to="/about-us">About Us</Nav.Link>
           <Nav.Link as={Link} to="/services">Services</Nav.Link>
           <LinkDropdown title="Gallery" link="/gallery" items={galleryItems} />
-          <Nav.Link as={Link} to="/garment-viewer">Garment Viewer</Nav.Link>
           <Nav.Link as={Link} to="/workshops">Workshops</Nav.Link>
-          <Nav.Link as={Link} to="/shop">Shop</Nav.Link>
           <Nav.Link as={Link} to="/contact-us">Contact Us</Nav.Link>
-          <Nav.Link as={Link} to="/book-consultation">Book a Consultation</Nav.Link>
+          <Nav.Link as={Link} to="/book-consultation" className="bookbutton">Book a Consultation</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

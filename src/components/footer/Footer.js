@@ -9,18 +9,11 @@ const Footer = () => {
     <footer className="footer text-white py-4">
         <div className="container-fluid">
             <div className="row">
-                <div className="col-md-2 text-start">
+                <div className="col-md-4 text-start">
                     <ul className="list-unstyled">
-                        <li><Link to="/about-us" className="footer-link">ABOUT US</Link></li>
                         <li><Link to="/services" className="footer-link">SERVICES</Link></li>
                         <li><Link to="/gallery" className="footer-link">GALLERY</Link></li>
-                        <li><Link to="/garment-viewer" className="footer-link">GARMENT VIEWER</Link></li>
-                    </ul>
-                </div>
-                <div className="col-md-2 text-start">
-                    <ul className="list-unstyled">
                         <li><Link to="/workshops" className="footer-link">WORKSHOPS</Link></li>
-                        <li><Link to="/shop" className="footer-link">SHOP</Link></li>
                         <li><Link to="/contact-us" className="footer-link">CONTACT US</Link></li>
                         <li><Link to="/book-consultation" className="footer-link">BOOK A CONSULTATION</Link></li>
                     </ul>

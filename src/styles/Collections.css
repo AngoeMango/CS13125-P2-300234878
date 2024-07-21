@@ -1,5 +1,11 @@
 /* src/components/Collections.css */
 
+.text-content {
+    padding: 50px 0 50px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
 .collections-gallery {
     padding: 20px;
 }
