@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Form, Button, Row, Col } from 'react-bootstrap';
 import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import '../styles/EnrollForm.css';
 
@@ -9,6 +10,8 @@ const EnrollForm = () => {
 	const workshop = location.state ? location.state.workshop : {};
 	const stripe = useStripe();
 	const elements = useElements();
+	const navigate = useNavigate();
+
 	const [firstName, setFirstName] = useState('');
 	const [lastName, setLastName] = useState('');
 	const [email, setEmail] = useState('');
@@ -81,13 +84,17 @@ const EnrollForm = () => {
 				</Col>
 			</Row>
 			<Form.Group controlId="formCard">
-			<Form.Label>Credit Card Details</Form.Label>
-			<CardElement />
+				<Form.Label>Credit Card Details</Form.Label>
+				<CardElement />
 			</Form.Group>
-			{errorMessage && <div className="text-danger mt-3">{errorMessage}</div>}
-			<Button variant="primary" type="submit" className="mt-3 button-enroll" disabled={!stripe || isProcessing}>
-			{isProcessing ? 'Processing...' : 'ENROLL'}
-			</Button>
+			<div className="form-buttons">
+				<Button className="button-enroll" variant="secondary" onClick={() => navigate('/workshops')}>
+					Back
+				</Button>
+				<Button className="button-enroll" variant="primary" type="submit" disabled={!stripe}>
+					Enroll Now
+				</Button>
+			</div>
 		</Form>
 		</Container>
 	);
