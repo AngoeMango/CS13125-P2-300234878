@@ -13,6 +13,7 @@ import Collections from './pages/gallerypages/Collections';
 import Fabrics from './pages/gallerypages/Fabrics'
 
 import Workshops from './pages/Workshops';
+import GarmentViewer from './pages/GarmentViewer';
 import ContactUs from './pages/ContactUs';
 import BookConsultation from './pages/BookConsultation';
 import Footer from './components/footer/Footer';
@@ -33,6 +34,7 @@ function App() {
 						<Route path="/gallerypages/collections" element={<Collections />} />
 						<Route path="/gallerypages/fabrics" element={<Fabrics />} />
 						<Route path="/workshops" element={<Workshops />} />
+						<Route path="/garment-viewer" element={<GarmentViewer />} />
 						<Route path="/contact-us" element={<ContactUs />} />
 						<Route path="/book-consultation" element={<BookConsultation />} />
 
